@@ -32,7 +32,10 @@ pip install -r requirements.txt
 
 ## 📚 Acknowledgments & Physical Parameters
 Camera hardware parameters ($16\,\mu\text{m}$ sensor pixel size, $150\times$ magnification) inspired by
-Nguyen et al. 2021, "Spatiotemporal coordination of transcription preinitiation complex assembly in live cells."
+Nguyen et al., 2021.
 
 ## 📜 License
 MIT License
+
+## References 
+Nguyen, V. Q., Anand, R., Sheng, L., Tang, X., Yick Hin, L., Wisniewski, J., Mizuguchi, G., Li, K. Y., Jou, V., Zheng, Q., Lavis, L. D., Lionnet, T., & Wu, C. (2021). Spatiotemporal coordination of transcription preinitiation complex assembly in live cells. Molecular Cell, 81(17), 3560–3575.e6. https://doi.org/10.1016/j.molcel.2021.07.022
