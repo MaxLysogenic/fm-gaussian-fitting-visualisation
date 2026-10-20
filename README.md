@@ -1,4 +1,4 @@
-# Single-Molecule Localization Microscopy (SMLM) Simulation Pipeline
+Single-Molecule Fluorescence Simulation & Sub-Pixel Gaussian Fitting Engine
 
 A 5-phase forward physical simulation and visualization pipeline illustrating Single-Molecule Localization Microscopy (SMLM) data processing, built using Python (`matplotlib`, `numpy`) and `ffmpeg`.
 

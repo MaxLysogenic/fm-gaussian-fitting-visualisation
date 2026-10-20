@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Lian"
+    given-names: "Max"
+    alias: "MaxLysogenic"
+title: "Single-Molecule Fluorescence Simulation & Sub-Pixel Gaussian Fitting Engine"
+version: 1.0.0
+date-released: 2026-10-20
+url: "https://github.com/MaxLysogenic/fm-gaussian-fitting-visualisation"
