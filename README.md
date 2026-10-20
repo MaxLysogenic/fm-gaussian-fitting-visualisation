@@ -17,7 +17,7 @@ Developed for an academic presentation on single-molecule transcription dynamics
 5. **Phase 5 (`smt_5.py`): Sub-Pixel Localization**  
    Reports the fitted centroid and shows the **$\pm 30\text{ nm}$ localization uncertainty** circle ($1\sigma$).
 
-From the repository root, render the phases in order with `python single_molecule_tracking/smt_1.py` through `python single_molecule_tracking/smt_5.py`. Phases 3–5 load the photon sample written by Phase 2, so rerun Phase 2 whenever you want to generate a new sample.
+From the repository root, render the phases in order with `python gaussian_fitting_visualisation/smt_1.py` through `python gaussian_fitting_visualisation/smt_5.py`. Videos are saved in `gaussian_fitting_visualisation/generated_videos/`. To combine them after rendering all five phases, run `python gaussian_fitting_visualisation/file_stitch_videos.py`; the combined video is saved in the same directory. Phases 3–5 load the photon sample written by Phase 2, so rerun Phase 2 whenever you want to generate a new sample.
 
 ## 🛠️ Installation & Usage
 

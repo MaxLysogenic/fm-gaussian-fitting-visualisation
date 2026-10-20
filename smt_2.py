@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
@@ -127,6 +129,8 @@ if __name__ == "__main__":
         psf_center=(PSF_X0, PSF_Y0),
     )
     print(f"Saved {all_photons_x.size} photon arrivals to {PHOTON_FILE}")
+    output_directory = Path(__file__).resolve().parent / "generated_videos"
+    output_directory.mkdir(exist_ok=True)
     anim = animation.FuncAnimation(
         fig,
         animate,
@@ -136,7 +140,7 @@ if __name__ == "__main__":
         blit=True,
     )
 
-    output_filename = "smt_2.mp4"
+    output_filename = output_directory / "smt_2.mp4"
     writer = animation.FFMpegWriter(fps=FPS, metadata=dict(artist='Max Lian'), bitrate=1800)
 
     anim.save(output_filename, writer=writer)

@@ -2,17 +2,20 @@ import subprocess
 import tempfile
 from pathlib import Path
 
+script_directory = Path(__file__).resolve().parent
+video_directory = script_directory / "generated_videos"
+
 # Define input files in order
-clips = [f"smt_{i}.mp4" for i in range(1, 6)]
+clips = [video_directory / f"smt_{i}.mp4" for i in range(1, 6)]
 
 # Verify all files exist before starting
 for clip in clips:
-    if not Path(clip).exists():
+    if not clip.is_file():
         raise FileNotFoundError(
-            f"Missing video clip: {clip}. Make sure smt_1.mp4 through smt_5.mp4 are present."
+            f"Missing video clip: {clip}. Run smt_1.py through smt_5.py first."
         )
 
-output_filename = "smt_all.mp4"
+output_filename = video_directory / "smt_all.mp4"
 
 # Add a three-second freeze-frame to each clip before concatenating them.
 with tempfile.TemporaryDirectory() as temp_dir:
@@ -26,7 +29,7 @@ with tempfile.TemporaryDirectory() as temp_dir:
             "ffmpeg",
             "-y",
             "-i",
-            str(Path(clip).resolve()),
+            str(clip),
             "-map",
             "0:v:0",
             "-map",

@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
@@ -191,6 +193,8 @@ if __name__ == "__main__":
     )
     print("Per-pixel photon counts (rows=y from bottom to top, columns=x left to right):")
     print(photon_counts)
+    output_directory = Path(__file__).resolve().parent / "generated_videos"
+    output_directory.mkdir(exist_ok=True)
     anim = animation.FuncAnimation(
         fig,
         animate,
@@ -200,7 +204,7 @@ if __name__ == "__main__":
         blit=True,
     )
 
-    output_filename = "smt_3.mp4"
+    output_filename = output_directory / "smt_3.mp4"
     writer = animation.FFMpegWriter(
         fps=FPS,
         metadata=dict(artist='Max Lian'),

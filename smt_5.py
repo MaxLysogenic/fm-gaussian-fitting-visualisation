@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
@@ -401,6 +403,8 @@ def animate(frame):
 if __name__ == "__main__":
     print("Rendering Phase 5: Sub-Pixel Localisation...")
     print(f"Fitted Gaussian centroid: ({x_fit:.3f}, {y_fit:.3f}) px")
+    output_directory = Path(__file__).resolve().parent / "generated_videos"
+    output_directory.mkdir(exist_ok=True)
     anim = animation.FuncAnimation(
         fig,
         animate,
@@ -410,7 +414,7 @@ if __name__ == "__main__":
         blit=True,
     )
 
-    output_filename = "smt_5.mp4"
+    output_filename = output_directory / "smt_5.mp4"
     writer = animation.FFMpegWriter(
         fps=FPS,
         metadata=dict(artist='Max Lian'),
