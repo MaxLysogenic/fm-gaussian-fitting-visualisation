@@ -24,7 +24,6 @@ From the repository root, render the phases in order with `python gaussian_fitti
 ### Prerequisites
 * Python 3.8+
 * `ffmpeg` installed and available in your system `PATH` (required for video rendering and concatenation).
-* `scipy` (used for the non-linear Gaussian fit).
 
 ### Setup
 ```bash
