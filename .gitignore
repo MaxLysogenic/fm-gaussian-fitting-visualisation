@@ -1,0 +1,6 @@
+*.mp4
+simulated_photons.npz
+__pycache__/
+*.pyc
+concat_list.txt
+.DS_Store
